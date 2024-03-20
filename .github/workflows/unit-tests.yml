@@ -18,7 +18,7 @@ jobs:
         with:
           java-version: 21
       - name: test
-        run: mvn -B test --file basics/pom.xml -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+        run: mvn -B test -pl basics -am -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
 
   object-oriented-programming:
       runs-on: ubuntu-22.04
@@ -29,7 +29,7 @@ jobs:
           with:
             java-version: 21
         - name: test
-          run: mvn -B test --file object-oriented-programming/pom.xml -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+          run: mvn -B test -pl object-oriented-programming -am -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
 
   collections:
     runs-on: ubuntu-22.04
@@ -40,4 +40,4 @@ jobs:
         with:
           java-version: 21
       - name: test
-        run: mvn -B test --file collections/pom.xml -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+        run: mvn -B test -pl collections -am -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
